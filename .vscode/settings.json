@@ -1,0 +1,36 @@
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll": "never",
+      "source.organizeImports": "always"
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "package.json": "eslint.config.mjs, package-lock.json, tsconfig.base.json, tsconfig.json, lerna.json",
+      "*.ts": "${basename}.test.ts, I${basename}.ts"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "typescript.suggest.enabled": true,
+    "typescript.format.enable": true,
+    "typescript.autoClosingTags": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.validate.enable": true,
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.preferences.jsxAttributeCompletionStyle": "braces",
+    "references.preferredLocation": "view",
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ]
+}
