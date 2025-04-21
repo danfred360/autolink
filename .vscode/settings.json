@@ -10,7 +10,7 @@
     "editor.detectIndentation": false,
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-      "package.json": "eslint.config.mjs, package-lock.json, tsconfig.base.json, tsconfig.json, lerna.json",
+      "package.json": "eslint.config.mjs, package-lock.json, tsconfig.base.json, tsconfig.json, lerna.json, webpack.config.js, .swcrc",
       "*.ts": "${basename}.test.ts, I${basename}.ts"
     },
     "[json]": {

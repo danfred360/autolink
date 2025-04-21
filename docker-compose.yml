@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  database:
+    build:
+      context: ./packages/database
+      dockerfile: docker/postgres.Dockerfile
+    container_name: autolink_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: ${PGDATA}
+    ports:
+      - "5432:5432"
+    # volumes:
+    #   - postgres_data:/var/lib/postgresql/data
+
+  express:
+    build:
+      context: ./packages/database
+      dockerfile: docker/app.Dockerfile
+    container_name: autolink_database_gateway
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_HOST: database
+      DB_PORT: 5432
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    # networks:
+    #   - host
+
+# volumes:
+#   postgres_data:
